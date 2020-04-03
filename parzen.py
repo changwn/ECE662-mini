@@ -139,17 +139,20 @@ for (key1, x_train), (key2, x_test), (key3, y_train), (key4, y_test) in \
     x = np.array([0,1,2,3,4,5])
     y = acc
     plt.plot(x,y,".-")
+    plt.title(key1)
     plt.ylabel("accuracy")
     plt.xlabel("window size (h)")
     plt.xticks(x,['0.1','0.5','1','2','5','10'])
-    plt.show()  
+    #plt.show()  
+    plt.savefig("par" + key1 + ".png")
         
-    if(k == 2):
+    if(k == 4):
         break
     
     
-    
-    plot_hist_dim1(X_train["c2_s80_n1"], Y_train["c2_s80_n1"], bins=int(40/10))
+ 
+#draw histogram for the dim-1
+plot_hist_dim1(X_train["c2_s80_n1"], Y_train["c2_s80_n1"], bins=int(40/10))
 
 
 
