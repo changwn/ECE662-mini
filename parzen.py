@@ -144,10 +144,10 @@ for (key1, x_train), (key2, x_test), (key3, y_train), (key4, y_test) in \
     plt.xlabel("window size (h)")
     plt.xticks(x,['0.1','0.5','1','2','5','10'])
     #plt.show()  
-    plt.savefig("par" + key1 + ".png")
+    plt.savefig("par_" + key1 + ".png")
         
-    if(k == 4):
-        break
+#    if(k == 4):
+#        break
     
     
  

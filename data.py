@@ -26,15 +26,15 @@ def data_parameters(type):
     dim -- array containing lists of # of dimensions for each feature vector for each subset of data
     '''
     if type == "set":
-        classes = np.array([[2, 2, 2, 2], [2, 2, 2, 2], [5]])
-        samples = np.array([[80, 80, 80, 80], [1000, 1000, 1000, 1000], [80]])
-        dims = np.array([[1, 2, 5, 10], [1, 2, 5, 10], [2]])
+        classes = np.array([[2, 2, 2, 2], [2, 2, 2, 2], [5], [2,2,2,2], [2,2,2,2]])
+        samples = np.array([[80, 80, 80, 80], [1000, 1000, 1000, 1000], [80], [300,600,1200,2400],[300,600,1200,2400]])
+        dims = np.array([[1, 2, 5, 10], [1, 2, 5, 10], [2], [1, 1, 1, 1],[2,2,2,2]])
     elif type == "vary":
         pass
 
     #asserting the right number of parameters are being returned
     assert len(classes[0]) == len(samples[0]) == len(dims[0]), \
-        "first set not equal length"
+        "first set not equal length"1
     assert len(classes[1]) == len(samples[1]) == len(dims[1]), \
         "second set not equal length"
     assert len(classes[2]) == len(samples[2]) == len(dims[2]), \
